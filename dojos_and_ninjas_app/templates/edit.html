@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static', filename='style/edit.css') }}"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="col-4 my-5 mx-auto">
+      <form action="/edit_ninja/{{ninja.dojo_id}}" method="post">
+        <h1>Edit Ninja</h1>
+        <input type="hidden" name="id" id="{{ninja.id}}" value="{{ninja.id}}"/>
+        <input
+          type="hidden"
+          name="dojo_id"
+          id="{{ninja.dojo_id}}"
+          value="{{ ninja.dojo_id }}"
+        />
+        {{ninja.dojo_id}}
+        <div class="input-group">
+          <span for="f_name l_name" class="input-group-text"
+            >First and last name</span
+          >
+          <label for="f_name"></label>
+          <input
+            name="f_name"
+            type="text"
+            aria-label="First name"
+            class="form-control"
+            value="{{ninja.first_name}}"
+          />
+          <label for="l_name"></label>
+          <input
+            name="l_name"
+            type="text"
+            aria-label="Last name"
+            class="form-control"
+            value="{{ninja.last_name}}"
+          />
+        </div>
+        <div class="input-group mb-3">
+          <span
+            for="age"
+            class="input-group-text"
+            id="inputGroup-sizing-default"
+            >Age</span
+          >
+          <input
+            name="age"
+            type="number"
+            class="form-control"
+            aria-label="Sizing example input"
+            aria-describedby="inputGroup-sizing-default"
+            value="{{ninja.age}}"
+          />
+        </div>
+        <input
+          type="submit"
+          value="Edit Ninja"
+          class="btn btn-primary btn-outline-secondary btn-outline-dark text-white"
+        />
+      </form>
+      <div>
+        <a href="http://127.0.0.1:5000/dojos">Home</a>
+      </div>
+    </div>
+  </body>
+</html>

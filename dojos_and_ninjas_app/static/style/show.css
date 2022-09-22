@@ -1,0 +1,10 @@
+@import "bootstrap.css";
+
+.container{
+    margin-top: 5%;
+}
+
+.container :not(.go_home){
+    text-align: center;
+}
+

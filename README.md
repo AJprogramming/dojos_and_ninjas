@@ -1,0 +1,1 @@
+In this project I used the MySQL database and aone to many relationship wireframe to allow people to Dojos location and allow users to add a dojo. Users will also be able to register for a dojo and are able to edit their account information.
